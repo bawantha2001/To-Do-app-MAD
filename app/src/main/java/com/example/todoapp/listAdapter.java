@@ -108,6 +108,7 @@ public class listAdapter extends ArrayAdapter<todoData> {
     private void showdeletetemDialog(int position, todoData todoData) {
         AlertDialog.Builder builder = new AlertDialog.Builder(getContext(),R.style.CustomAlertDialog);
         builder.setTitle("Delete "+todoData.todoItem);
+        builder.setMessage("Really want to delete "+todoData.todoItem+" ?");
 
         builder.setPositiveButton("Delete", (dialog, which) -> {
             dataArrayList.remove(position);

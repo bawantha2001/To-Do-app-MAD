@@ -20,7 +20,7 @@ public class sharedPreferences {
 
     public void saveTodoList(ArrayList<String> todoList) {
         Set<String> set = new HashSet<>(todoList);
-        editor.putStringSet(KEY_TODO_LIST, set);
+        editor.putStringSet(KEY_TODO_LIST,set);
         editor.apply();
     }
 

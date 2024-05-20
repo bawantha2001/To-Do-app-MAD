@@ -1,6 +1,7 @@
 package com.example.todoapp;
 
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
@@ -19,8 +20,7 @@ public class main_screen extends AppCompatActivity {
     ActivityMainScreenBinding binding;
     listAdapter listAdapter;
     ArrayList<todoData> dataArrayList = new ArrayList<>();
-    todoData todoData;
-    ImageView add;
+
     sharedPreferences sharedPrefManager;
 
     @Override
@@ -29,6 +29,10 @@ public class main_screen extends AppCompatActivity {
         binding = ActivityMainScreenBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
+        String email= getIntent().getStringExtra("Email");
+        String registerUsername = getIntent().getStringExtra("Username");
+
+        binding.txtMail.setText(email);
 
         sharedPrefManager = new sharedPreferences(this);
 
@@ -50,6 +54,26 @@ public class main_screen extends AppCompatActivity {
                 showAddItemDialog();
             }
         });
+
+        binding.imgDevinfo.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(main_screen.this,DevInfo.class);
+                startActivity(intent);
+            }
+        });
+
+        binding.imgUserinfo.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(main_screen.this,UserInfo.class);
+                intent.putExtra("Email", email);
+                intent.putExtra("Username", registerUsername);
+                startActivity(intent);
+                finish();
+            }
+        });
+
     }
 
     private void showAddItemDialog() {

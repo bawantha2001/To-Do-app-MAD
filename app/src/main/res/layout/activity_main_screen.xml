@@ -29,7 +29,7 @@
                 android:padding="5dp">
 
                 <ImageView
-                    android:id="@+id/imageView3"
+                    android:id="@+id/img_userinfo"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
@@ -41,7 +41,6 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_vertical"
-                    android:text="wrbawantha@gmail.com"
                     android:textColor="#333F3E"
                     android:textStyle="bold" />
 
@@ -52,7 +51,7 @@
                     android:orientation="horizontal">
 
                     <ImageView
-                        android:id="@+id/imageView4"
+                        android:id="@+id/img_devinfo"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center_horizontal|center_vertical|end"
@@ -86,7 +85,7 @@
             <ListView
                 android:id="@+id/todoitemlistview"
                 android:layout_width="match_parent"
-                android:layout_height="400dp"
+                android:layout_height="wrap_content"
                 android:dividerHeight="10dp"
                 tools:listitem="@layout/list_item">
 
