@@ -10,6 +10,7 @@
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:background="#333F3E"
+        android:gravity="center"
         android:orientation="vertical"
         android:padding="10px"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -24,15 +25,13 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:layout_marginTop="200px"
-            android:src="@tools:sample/avatars"
             app:srcCompat="@drawable/img" />
 
         <TextView
             android:id="@+id/textView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="70dp"
+            android:layout_marginTop="10dp"
             android:gravity="center"
             android:text="To Do"
             android:textColor="#E2E3E1"
@@ -43,7 +42,7 @@
             android:id="@+id/textView2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="150dp"
+            android:layout_marginTop="300dp"
             android:gravity="center"
             android:text="Bsoft Production"
             android:textColor="#E2E3E1"
